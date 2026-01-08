@@ -60,7 +60,7 @@ Predictor Variables:
   2. Random Forest
   3. Support Vector Machine (SVM)
 
--Evaluated models using confusion matrices, ROC curves, and classification metrics:
+-Evaluated models using confusion matrices, ROC curves, and classification metrics: <a href="https://github.com/Lindamusundi47/Early-Detection-of-FMD-in-cattle-Using-Machine-Learning/blob/main/Evaluation%20of%20models.png"> Evaluation of Models </a>
 
 Random Forest achieved the best performance, making it the most suitable model for early detection of FMD in this dataset.
 
