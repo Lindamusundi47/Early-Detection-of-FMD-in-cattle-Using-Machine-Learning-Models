@@ -17,10 +17,56 @@ Using R, the analysis identifies key risk factors associated with FMD infection 
 
 ## Dataset Overview
 
-< a href="
+< a href="https://github.com/Lindamusundi47/Early-Detection-of-FMD-in-cattle-Using-Machine-Learning/blob/main/Raw%20data.xls"> Dataset</a>
+
 Observations: 266 cattle samples
 Target Variable: FMD_Status (Positive / Negative)
 Predictor Variables:
 1. Location: Districts, Kebeles
 2. Animal factors: Breed, Sex, Age, Body Condition, Physiology
 3. Environmental factors: Altitude, Agro-Climate
+
+## Methodology
+
+### 1. Data Cleaning & Preparation
+
+- Renamed and standardized variables for consistency
+- Verified no missing values or duplicates
+- Converted categorical variables to factors
+- Removed IDs and non-informative features
+
+### 2. Handling Class Imbalance
+
+- The original dataset was imbalanced (~80% Negative cases)
+- I applied ROSE (combined over-sampling and under-sampling)
+- Achieved a balanced dataset (~50:50) to improve model fairness and detection of positive cases
+
+### 3. Exploratory Data Analysis (EDA)
+
+-Generated stratified summaries by FMD status
+-Examined distributions across demographic and environmental variables
+-Performed correlation analysis to identify multicollinearity
+
+### 4. Feature Selection
+
+- Used the Boruta algorithm to identify statistically important predictors
+- Reduced noise and improved model interpretability and performance
+
+### 5. Modeling & Evaluation
+
+- Split data into 70% training and 30% testing sets
+- Trained and compared:
+  1. Logistic Regression
+  2. Random Forest
+  3. Support Vector Machine (SVM)
+
+-Evaluated models using confusion matrices, ROC curves, and classification metrics
+
+Random Forest achieved the best performance, making it the most suitable model for early detection of FMD in this dataset.
+
+## Key Insights
+
+-Poor body condition significantly increases the likelihood of FMD infection
+-Older cattle showed higher infection rates
+-Geographic location (Districts and Kebeles) strongly influenced disease prevalence
+-Agro-climate and physiological status were consistent predictors across models
